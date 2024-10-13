@@ -5,13 +5,15 @@ import 'news_detail_page.dart';
 import 'news_models.dart';
 
 class HomeView extends GetView<HomeController> {
+  const HomeView({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('News')),
+      appBar: AppBar(title: const Text('News')),
       body: Obx(() {
         if (controller.isLoading.value) {
-          return Center(child: CircularProgressIndicator());
+          return const Center(child: CircularProgressIndicator());
         } else {
           return ListView.builder(
             itemCount: controller.articles.length,
@@ -22,7 +24,7 @@ class HomeView extends GetView<HomeController> {
                 subtitle: Text(article.description ?? 'No description'),
                 leading: article.urlToImage != null
                     ? Image.network(article.urlToImage!, width: 50, height: 50, fit: BoxFit.cover)
-                    : Icon(Icons.newspaper),
+                    : const Icon(Icons.newspaper),
                 onTap: () => Get.to(() => NewsDetailPage(article: article)),
               );
             },
