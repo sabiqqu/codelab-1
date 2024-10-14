@@ -3,7 +3,7 @@ import 'package:http/http.dart' as http;
 import 'news_models.dart';
 
 class NewsService {
-  final String apiKey = '5562f968670a4f178c896fad260e0112'; // Replace with your actual NewsAPI key
+  final String apiKey = '2c32ecec33d54b749c7ba8093b246c0d'; // Replace with your actual NewsAPI key
   final String baseUrl = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=';
 
   Future<NewsModel> getNews() async {

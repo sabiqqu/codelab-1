@@ -6,7 +6,7 @@ class AppRoutes {
   static final routes = [
     GetPage(
       name: '/',
-      page: () => HomeView(),
+      page: () => const HomeView(),
       binding: HomeBinding(),
     ),
   ];
